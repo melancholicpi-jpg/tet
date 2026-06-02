@@ -1,0 +1,62 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "merchant-scraper"
+version = "0.1.0"
+description = "Full-stack merchant information scraper solution"
+authors = [{name = "Development Team"}]
+license = "MIT"
+python-requires = ">=3.9"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0",
+    "flake8>=6.0",
+    "mypy>=1.0"
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+# HTTP and scraping
+httpx = "^0.24.0"
+playwright = "^1.40.0"
+beautifulsoup4 = "^4.12.0"
+lxml = "^4.9.0"
+requests = "^2.31.0"
+
+# Database
+sqlalchemy = "^2.0"
+psycopg2-binary = "^2.9.0"
+elasticsearch = "^8.10.0"
+redis = "^5.0.0"
+
+# Task scheduling and async
+celery = "^5.3.0"
+aiohttp = "^3.9.0"
+asyncio-contextmanager = "^1.0.0"
+
+# Data processing
+pandas = "^2.1.0"
+numpy = "^1.24.0"
+
+# LLM and AI
+openai = "^1.3.0"
+python-dotenv = "^1.0.0"
+
+# Proxy and anti-detection
+curl-impersonate = "^0.5.0"
+fake-useragent = "^1.4.0"
+
+# Monitoring and logging
+prometheus-client = "^0.18.0"
+python-json-logger = "^2.0.0"
+structlog = "^23.2.0"
+
+# Utilities
+pydantic = "^2.0"
+python-dateutil = "^2.8.0"
+Levenshtein = "^0.21.0"
